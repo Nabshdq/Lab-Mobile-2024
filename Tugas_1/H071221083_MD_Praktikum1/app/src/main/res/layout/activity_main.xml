@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient_bg">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        app:srcCompat="@drawable/sukuna_drink" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Muhammad Nabil Shadiq"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <TextView
+        android:id="@+id/textViewGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jenis Kelamin"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0."
+        app:layout_constraintStart_toStartOf="@+id/textViewGender"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGender"
+        app:layout_constraintVertical_bias="0.01">
+
+        <RadioButton
+            android:id="@+id/radioButtonMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laki-laki"
+            tools:layout_editor_absoluteX="120dp"
+            tools:layout_editor_absoluteY="345dp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perempuan"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="341dp" />
+    </RadioGroup>
+
+
+
+    <TextView
+        android:id="@+id/textViewLikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="4dp"
+        android:text="Hal yang disukai:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupGender" />
+
+    <CheckBox
+        android:id="@+id/checkBoxGame"
+        android:layout_width="80dp"
+        android:layout_height="24dp"
+        android:layout_marginVertical="0.1dp"
+        android:text="Game"
+        app:layout_constraintStart_toStartOf="@+id/textViewLikes"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLikes" />
+
+    <CheckBox
+        android:id="@+id/checkBoxMoney"
+        android:layout_width="79dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="8dp"
+        android:text="Money"
+        app:layout_constraintStart_toStartOf="@+id/textViewLikes"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxGame" />
+
+    <CheckBox
+        android:id="@+id/checkBoxOther"
+        android:layout_width="92dp"
+        android:layout_height="25dp"
+        android:text="Lainnya"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textViewLikes"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxMoney"
+        app:layout_constraintVertical_bias="0.027" />
+
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="151dp"
+        android:layout_height="39dp"
+        android:hint="Tambahkan   -------->"
+        android:inputType="text"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.657" />
+
+    <Button
+        android:id="@+id/btnadd"
+        android:layout_width="105dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#A19B9C"
+        android:hint="Tambah"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.950"
+        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText"
+        app:strokeColor="#170101"
+        app:strokeWidth="1dp"
+        android:onClick="onClick"/>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="348dp"
+        android:layout_height="198dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.949" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
